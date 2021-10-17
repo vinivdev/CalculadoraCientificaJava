@@ -403,7 +403,7 @@ public class View_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_mcActionPerformed
 
     private void jButton_CAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CAActionPerformed
-        //limpa Painel
+        //limpa Painel ok
         Painel.setText("");
         
         //limpa var 'numero1'
