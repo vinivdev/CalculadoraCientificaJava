@@ -544,7 +544,12 @@ public class View_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_piActionPerformed
 
     private void jButton_tanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_tanActionPerformed
-     
+        //pega o angulo do painel para calcular e amarzena na var 'resultado'
+        calculadora.calcularTan(Painel.getText());
+        
+        //exibe o resultado no painel
+        Painel.setText(calculadora.getResultado());
+        
     }//GEN-LAST:event_jButton_tanActionPerformed
 
     private void InserirDigito(String digito){        

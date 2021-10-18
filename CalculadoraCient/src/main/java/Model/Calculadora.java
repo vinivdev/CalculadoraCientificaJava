@@ -83,6 +83,13 @@ public class Calculadora {
         return resultado;
     }
     
+    public void calcularTan(String painel){
+        
+        numero1 = Math.toRadians(Double.parseDouble(painel));
+        
+        resultado = Math.tan(numero1);
+    }
+    
     
     
 }
