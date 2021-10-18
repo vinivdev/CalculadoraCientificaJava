@@ -14,5 +14,6 @@ public class Ctr_Calculadora {
         if (calculadora.getOperador() == "-"){
             calculadora.subtrair(calculadora.getNumero1(), calculadora.getNumero2());
         }
+        
     }
 }

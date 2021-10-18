@@ -22,6 +22,13 @@ public class Calculadora {
         resultado = 0;
         operador = "";
     }
+    
+    public void limpar(){
+        numero1 = 0;
+        numero2 = 0;
+        resultado = 0;
+        operador = "";
+    }
 
     public double getNumero1() {
         return numero1;

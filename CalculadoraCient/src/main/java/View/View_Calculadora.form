@@ -29,11 +29,13 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jButton_CA" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jButton_euler" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jButton_mc" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jButton_mMenos" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="jButton_CA" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="jButton_mc" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="jButton_mMenos" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jButton_exp" alignment="1" min="-2" pref="55" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -61,7 +63,7 @@
                                   <Component id="jButton_n7" alignment="2" max="32767" attributes="0"/>
                                   <Component id="jButton_n4" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
                                   <Component id="jButton_n1" alignment="2" min="-2" pref="55" max="-2" attributes="0"/>
-                                  <Component id="jButton_exp" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                  <Component id="jButton_euler" alignment="1" min="-2" pref="55" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
@@ -87,18 +89,21 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                      <Component id="jLabel_calculadora" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="jLabel_calculadora" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -106,17 +111,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-              <Component id="jLabel_calculadora" pref="66" max="32767" attributes="0"/>
+              <Component id="jLabel_calculadora" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton_mMenos" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton_nMais" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton_divRest" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton_divInt" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton_pi" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jButton_exp" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jButton_euler" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -139,7 +144,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jButton_tan" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jButton_euler" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="jButton_exp" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -302,6 +307,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="tan"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_tanActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_pi">
       <Properties>
