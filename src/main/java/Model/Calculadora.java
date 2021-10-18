@@ -22,6 +22,13 @@ public class Calculadora {
         resultado = 0;
         operador = "";
     }
+    
+    public void limpar(){
+        numero1 = 0;
+        numero2 = 0;
+        resultado = 0;
+        operador = "";
+    }
 
     public double getNumero1() {
         return numero1;
@@ -60,5 +67,24 @@ public class Calculadora {
         return resultado;
     }
     
+    public double subtrair(double numero1, double numero2){
+        resultado = numero1 - numero2;
+        return resultado;
+    }
+    
+    public double multiplicar(double numero1, double numero2){
+        resultado = numero1 * numero2;
+        return resultado;
+    }
+    
+    public double divInt(double numero1, double numero2){
+        resultado = numero1 / numero2;
+        return resultado;
+    }
+    
+    public double divRest(double numero1, double numero2){
+        resultado = numero1 % numero2;
+        return resultado;
+    }
     
 }
