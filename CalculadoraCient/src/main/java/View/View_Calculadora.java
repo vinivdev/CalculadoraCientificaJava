@@ -208,6 +208,11 @@ public class View_Calculadora extends javax.swing.JFrame {
         });
 
         jButton_exp.setText("exp");
+        jButton_exp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_expActionPerformed(evt);
+            }
+        });
 
         jButton_divRest.setText("%");
         jButton_divRest.addActionListener(new java.awt.event.ActionListener() {
@@ -551,6 +556,20 @@ public class View_Calculadora extends javax.swing.JFrame {
         Painel.setText(calculadora.getResultado());
         
     }//GEN-LAST:event_jButton_tanActionPerformed
+
+    private void jButton_expActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_expActionPerformed
+        //pega oq esta no painel e coloca na var 'numero1'
+        calculadora.setNumero1(Painel.getText());
+        
+        //limpa o painel
+        Painel.setText("");
+        calculadora.calcularExp(calculadora.getNumero1());
+        
+        Painel.setText(calculadora.getResultado());
+        
+        //define o operador como soma(+)
+        //calculadora.setOperador("exp");
+    }//GEN-LAST:event_jButton_expActionPerformed
 
     private void InserirDigito(String digito){        
         if(Painel.equals("")){

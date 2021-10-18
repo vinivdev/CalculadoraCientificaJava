@@ -83,6 +83,11 @@ public class Calculadora {
         return resultado;
     }
     
+    public double calcularExp(double numero1){
+        resultado = Math.exp(numero1);
+        return resultado;
+    }
+    
     public void calcularTan(String painel){
         
         numero1 = Math.toRadians(Double.parseDouble(painel));

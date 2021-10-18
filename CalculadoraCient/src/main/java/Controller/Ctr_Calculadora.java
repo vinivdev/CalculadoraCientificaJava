@@ -23,6 +23,10 @@ public class Ctr_Calculadora {
         if (calculadora.getOperador() == "%"){
             calculadora.divRest(calculadora.getNumero1(), calculadora.getNumero2());
         }
+        /*if (calculadora.getOperador() == "exp"){
+            calculadora.calcularExp(calculadora.getNumero1(), calculadora.getNumero2());
+        }
+        */
 
     }
 }
