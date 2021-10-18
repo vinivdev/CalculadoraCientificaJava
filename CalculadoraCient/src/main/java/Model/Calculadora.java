@@ -89,6 +89,18 @@ public class Calculadora {
         
         resultado = Math.tan(numero1);
     }
+    public void calcularSin(String painel){
+        
+        numero1 = Math.toRadians(Double.parseDouble(painel));
+        
+        resultado = Math.sin(numero1);
+    }
+    public void calcularCos(String painel){
+        
+        numero1 = Math.toRadians(Double.parseDouble(painel));
+        
+        resultado = Math.cos(numero1);
+    }
     
     
     

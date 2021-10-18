@@ -161,9 +161,19 @@ public class View_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton_seno.setText("seno");
+        jButton_seno.setText("sin");
+        jButton_seno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_senoActionPerformed(evt);
+            }
+        });
 
         jButton_cos.setText("cos");
+        jButton_cos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_cosActionPerformed(evt);
+            }
+        });
 
         jButton_tan.setText("tan");
         jButton_tan.addActionListener(new java.awt.event.ActionListener() {
@@ -551,6 +561,22 @@ public class View_Calculadora extends javax.swing.JFrame {
         Painel.setText(calculadora.getResultado());
         
     }//GEN-LAST:event_jButton_tanActionPerformed
+
+    private void jButton_senoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_senoActionPerformed
+         //pega o angulo do painel para calcular e amarzena na var 'resultado'
+        calculadora.calcularSin(Painel.getText());
+        
+        //exibe o resultado no painel
+        Painel.setText(calculadora.getResultado());
+    }//GEN-LAST:event_jButton_senoActionPerformed
+
+    private void jButton_cosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cosActionPerformed
+        //pega o angulo do painel para calcular e amarzena na var 'resultado'
+        calculadora.calcularCos(Painel.getText());
+        
+        //exibe o resultado no painel
+        Painel.setText(calculadora.getResultado());
+    }//GEN-LAST:event_jButton_cosActionPerformed
 
     private void InserirDigito(String digito){        
         if(Painel.equals("")){
