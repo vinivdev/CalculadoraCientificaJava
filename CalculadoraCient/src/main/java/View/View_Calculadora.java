@@ -154,7 +154,7 @@ public class View_Calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton_CA.setText("CA");
+        jButton_CA.setText("AC");
         jButton_CA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_CAActionPerformed(evt);
@@ -168,6 +168,11 @@ public class View_Calculadora extends javax.swing.JFrame {
         jButton_tan.setText("tan");
 
         jButton_pi.setText("pi");
+        jButton_pi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_piActionPerformed(evt);
+            }
+        });
 
         jButton_nMais.setText("M+");
         jButton_nMais.addActionListener(new java.awt.event.ActionListener() {
@@ -244,7 +249,6 @@ public class View_Calculadora extends javax.swing.JFrame {
         jLabel_calculadora.setFont(new java.awt.Font("Dubai", 0, 36)); // NOI18N
         jLabel_calculadora.setText("Calculadora");
 
-        Painel.setBackground(new java.awt.Color(255, 255, 255));
         Painel.setColumns(20);
         Painel.setRows(5);
         jScrollPane2.setViewportView(Painel);
@@ -530,6 +534,10 @@ public class View_Calculadora extends javax.swing.JFrame {
     private void jButton_pontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_pontoActionPerformed
         InserirDigito(".");
     }//GEN-LAST:event_jButton_pontoActionPerformed
+
+    private void jButton_piActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_piActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_piActionPerformed
 
     private void InserirDigito(String digito){        
         if(Painel.equals("")){

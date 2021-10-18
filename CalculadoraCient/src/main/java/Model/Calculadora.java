@@ -59,6 +59,10 @@ public class Calculadora {
         resultado = numero1 + numero2;
         return resultado;
     }
+    public double subtrair(double numero1, double numero2){
+        resultado = numero1 - numero2;
+        return resultado;
+    }
     
     
 }
