@@ -23,5 +23,6 @@ public class Ctr_Calculadora {
         if (calculadora.getOperador() == "%"){
             calculadora.divRest(calculadora.getNumero1(), calculadora.getNumero2());
         }
+
     }
 }
