@@ -14,5 +14,14 @@ public class Ctr_Calculadora {
         if (calculadora.getOperador() == "-"){
             calculadora.subtrair(calculadora.getNumero1(), calculadora.getNumero2());
         }
+        if (calculadora.getOperador() == "*"){
+            calculadora.multiplicar(calculadora.getNumero1(), calculadora.getNumero2());
+        }
+        if (calculadora.getOperador() == "/"){
+            calculadora.dividir(calculadora.getNumero1(), calculadora.getNumero2());
+        }
+        if (calculadora.getOperador() == "%"){
+            calculadora.divRest(calculadora.getNumero1(), calculadora.getNumero2());
+        }
     }
 }
