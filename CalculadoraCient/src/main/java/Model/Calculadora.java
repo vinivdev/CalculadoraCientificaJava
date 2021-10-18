@@ -70,6 +70,18 @@ public class Calculadora {
         resultado = numero1 - numero2;
         return resultado;
     }
+    public double multiplicar(double numero1, double numero2){
+        resultado = numero1 * numero2;
+        return resultado;
+    }
+    public double dividir(double numero1, double numero2){
+        resultado = numero1 / numero2;
+        return resultado;
+    }
+    public double divRest(double numero1, double numero2){
+        resultado = numero1 % numero2;
+        return resultado;
+    }
     
     
     
