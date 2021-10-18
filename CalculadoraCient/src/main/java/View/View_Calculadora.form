@@ -295,13 +295,19 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton_seno">
       <Properties>
-        <Property name="text" type="java.lang.String" value="seno"/>
+        <Property name="text" type="java.lang.String" value="sin"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_senoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_cos">
       <Properties>
         <Property name="text" type="java.lang.String" value="cos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_cosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_tan">
       <Properties>
