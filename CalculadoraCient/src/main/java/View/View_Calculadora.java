@@ -7,7 +7,6 @@ package View;
 
 import Controller.Ctr_Calculadora;
 import Model.Calculadora;
-import Model.Erro;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,9 +21,15 @@ public class View_Calculadora extends javax.swing.JFrame {
     public View_Calculadora() {
         initComponents();
     }
-    Ctr_Calculadora ControleCalc = new Ctr_Calculadora();
-    Calculadora calculadora = new Calculadora();
-    Erro erro = new Erro();
+    Ctr_Calculadora ControlCalculadora = new Ctr_Calculadora();
+    /*
+    Excluir a instancia da model
+    criar metodo no ctrl para ele receber da view
+    
+    a view não vai fazer a conversão, apenas passar para o control
+    os metodos do controle que farão a conversão de tipos,
+    
+    */
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -432,17 +437,8 @@ public class View_Calculadora extends javax.swing.JFrame {
         //limpa Painel ok
         Painel.setText("");
         
-        //limpa var 'numero1'
-        calculadora.setNumero1("");
-        
-        //limpa var 'numero2'
-        calculadora.setNumero2("");
-        
-        //limpa var 'operador'
-        calculadora.setOperador("");
-        
-        //limpa var 'resultado'
-        calculadora.setResultado("");
+        //reinicia as variaveis
+        ControlCalculadora.Reiniciar();
     }//GEN-LAST:event_jButton_CAActionPerformed
 
     private void jButton_eulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_eulerActionPerformed
@@ -483,71 +479,72 @@ public class View_Calculadora extends javax.swing.JFrame {
 
     private void jButton_divRestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_divRestActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
-        calculadora.setNumero1(Painel.getText());
+        ControlCalculadora.setNumero1(Painel.getText());
         
         //limpa o painel
         Painel.setText("");
         
         //define o operador como soma(+)
-        calculadora.setOperador("%");
+        ControlCalculadora.setOperador("%");
     }//GEN-LAST:event_jButton_divRestActionPerformed
 
     private void jButton_divIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_divIntActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
-        calculadora.setNumero1(Painel.getText());
+        ControlCalculadora.setNumero1(Painel.getText());
         
         //limpa o painel
         Painel.setText("");
         
         //define o operador como soma(+)
-        calculadora.setOperador("/");
+        ControlCalculadora.setOperador("/");
     }//GEN-LAST:event_jButton_divIntActionPerformed
 
     private void jButton_totalizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_totalizaActionPerformed
+        
         //pega oq esta no painel e coloca na var 'numero2'
-        calculadora.setNumero2(Painel.getText());
+        ControlCalculadora.setNumero2(Painel.getText());
         
         //realiza a operação
-        ControleCalc.SelecionaOperadoracao(calculadora);
+        ControlCalculadora.SelecionaOperadoracao();
         
         //saída do resultado da operação
-        Painel.setText(calculadora.getResultado());
+        Painel.setText(ControlCalculadora.getResultado());
         
         //limpa as variaveis para o proximo calculo
-        calculadora.limpar();
+        ControlCalculadora.Reiniciar();
     }//GEN-LAST:event_jButton_totalizaActionPerformed
 
     private void jButton_multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_multiActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
-        calculadora.setNumero1(Painel.getText());
+        ControlCalculadora.setNumero1(Painel.getText());
         
         //limpa o painel
         Painel.setText("");
         
         //define o operador como soma(+)
-        calculadora.setOperador("*");
+        ControlCalculadora.setOperador("*");
     }//GEN-LAST:event_jButton_multiActionPerformed
 
     private void jButton_subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_subActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
-        calculadora.setNumero1(Painel.getText());
+        ControlCalculadora.setNumero1(Painel.getText());
         
         //limpa o painel
         Painel.setText("");
         
         //define o operador como soma(+)
-        calculadora.setOperador("-");
+        ControlCalculadora.setOperador("-");
     }//GEN-LAST:event_jButton_subActionPerformed
 
     private void jButton_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_somaActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
-        calculadora.setNumero1(Painel.getText());
+        ControlCalculadora.setNumero1(Painel.getText());
         
         //limpa o painel
         Painel.setText("");
         
         //define o operador como soma(+)
-        calculadora.setOperador("+");
+        ControlCalculadora.setOperador("+");
     }//GEN-LAST:event_jButton_somaActionPerformed
 
     private void jButton_pontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_pontoActionPerformed
@@ -560,23 +557,24 @@ public class View_Calculadora extends javax.swing.JFrame {
 
     private void jButton_tanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_tanActionPerformed
         //pega o angulo do painel para calcular e amarzena na var 'resultado'
-        calculadora.calcularTan(Painel.getText());
+        ControlCalculadora.calcularTan(Painel.getText());
         
         //exibe o resultado no painel
-        Painel.setText(calculadora.getResultado());
+        Painel.setText(ControlCalculadora.getResultado());
         
     }//GEN-LAST:event_jButton_tanActionPerformed
 
-
     private void jButton_expActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_expActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
-        calculadora.setNumero1(Painel.getText());
+        ControlCalculadora.setNumero1(Painel.getText());
         
         //limpa o painel
         Painel.setText("");
-        calculadora.calcularExp(calculadora.getNumero1());
         
-        Painel.setText(calculadora.getResultado());
+        //faz operação
+        ControlCalculadora.calcularExp(ControlCalculadora.getNumero1());
+        
+        Painel.setText(ControlCalculadora.getResultado());
         
         //define o operador como soma(+)
         //calculadora.setOperador("exp");
@@ -584,18 +582,18 @@ public class View_Calculadora extends javax.swing.JFrame {
 
     private void jButton_senoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_senoActionPerformed
          //pega o angulo do painel para calcular e amarzena na var 'resultado'
-        calculadora.calcularSin(Painel.getText());
+        ControlCalculadora.calcularSin(Painel.getText());
         
         //exibe o resultado no painel
-        Painel.setText(calculadora.getResultado());
+        Painel.setText(ControlCalculadora.getResultado());
     }//GEN-LAST:event_jButton_senoActionPerformed
 
     private void jButton_cosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cosActionPerformed
         //pega o angulo do painel para calcular e amarzena na var 'resultado'
-        calculadora.calcularCos(Painel.getText());
+        ControlCalculadora.calcularCos(Painel.getText());
         
         //exibe o resultado no painel
-        Painel.setText(calculadora.getResultado());
+        Painel.setText(ControlCalculadora.getResultado());
     }//GEN-LAST:event_jButton_cosActionPerformed
 
 
