@@ -567,7 +567,7 @@ public class View_Calculadora extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton_tanActionPerformed
 
-<<<<<<< HEAD
+
     private void jButton_expActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_expActionPerformed
         //pega oq esta no painel e coloca na var 'numero1'
         calculadora.setNumero1(Painel.getText());
@@ -581,7 +581,7 @@ public class View_Calculadora extends javax.swing.JFrame {
         //define o operador como soma(+)
         //calculadora.setOperador("exp");
     }//GEN-LAST:event_jButton_expActionPerformed
-=======
+
     private void jButton_senoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_senoActionPerformed
          //pega o angulo do painel para calcular e amarzena na var 'resultado'
         calculadora.calcularSin(Painel.getText());
@@ -597,7 +597,7 @@ public class View_Calculadora extends javax.swing.JFrame {
         //exibe o resultado no painel
         Painel.setText(calculadora.getResultado());
     }//GEN-LAST:event_jButton_cosActionPerformed
->>>>>>> 09b6569f947f7df0c15ff0c2078f3117ecfb3711
+
 
     private void InserirDigito(String digito){        
         if(Painel.equals("")){
