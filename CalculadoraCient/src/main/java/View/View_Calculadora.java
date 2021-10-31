@@ -274,6 +274,7 @@ public class View_Calculadora extends javax.swing.JFrame {
         jLabel_calculadora.setFont(new java.awt.Font("Dubai", 0, 36)); // NOI18N
         jLabel_calculadora.setText("Calculadora");
 
+        Painel.setEditable(false);
         Painel.setColumns(20);
         Painel.setRows(5);
         jScrollPane2.setViewportView(Painel);
@@ -410,11 +411,11 @@ public class View_Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_n3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n3ActionPerformed
-        InserirDigito("3");
+        InserirDigito(jButton_n3.getText());
     }//GEN-LAST:event_jButton_n3ActionPerformed
 
     private void jButton_n6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n6ActionPerformed
-        InserirDigito("6");
+        InserirDigito(jButton_n6.getText());
     }//GEN-LAST:event_jButton_n6ActionPerformed
 
     private void jButton_nMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_nMaisActionPerformed
@@ -446,35 +447,35 @@ public class View_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_eulerActionPerformed
 
     private void jButton_n0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n0ActionPerformed
-        InserirDigito("0");
+        InserirDigito(jButton_n0.getText());
     }//GEN-LAST:event_jButton_n0ActionPerformed
 
     private void jButton_n1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n1ActionPerformed
-        InserirDigito("1");
+        InserirDigito(jButton_n1.getText());
     }//GEN-LAST:event_jButton_n1ActionPerformed
 
     private void jButton_n2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n2ActionPerformed
-        InserirDigito("2");
+        InserirDigito(jButton_n2.getText());
     }//GEN-LAST:event_jButton_n2ActionPerformed
 
     private void jButton_n4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n4ActionPerformed
-        InserirDigito("4");
+        InserirDigito(jButton_n4.getText());
     }//GEN-LAST:event_jButton_n4ActionPerformed
 
     private void jButton_n5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n5ActionPerformed
-        InserirDigito("5");
+        InserirDigito(jButton_n5.getText());
     }//GEN-LAST:event_jButton_n5ActionPerformed
 
     private void jButton_n7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n7ActionPerformed
-        InserirDigito("7");
+        InserirDigito(jButton_n7.getText());
     }//GEN-LAST:event_jButton_n7ActionPerformed
 
     private void jButton_n8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n8ActionPerformed
-        InserirDigito("8");
+        InserirDigito(jButton_n8.getText());
     }//GEN-LAST:event_jButton_n8ActionPerformed
 
     private void jButton_n9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_n9ActionPerformed
-        InserirDigito("9");
+        InserirDigito(jButton_n9.getText());
     }//GEN-LAST:event_jButton_n9ActionPerformed
 
     private void jButton_divRestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_divRestActionPerformed
@@ -484,8 +485,8 @@ public class View_Calculadora extends javax.swing.JFrame {
         //limpa o painel
         Painel.setText("");
         
-        //define o operador como soma(+)
-        ControlCalculadora.setOperador("%");
+        //define o operador como Resto da Div(%)
+        ControlCalculadora.setOperador(jButton_divRest.getText());
     }//GEN-LAST:event_jButton_divRestActionPerformed
 
     private void jButton_divIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_divIntActionPerformed
@@ -495,8 +496,8 @@ public class View_Calculadora extends javax.swing.JFrame {
         //limpa o painel
         Painel.setText("");
         
-        //define o operador como soma(+)
-        ControlCalculadora.setOperador("/");
+        //define o operador como Divisão (/)
+        ControlCalculadora.setOperador(jButton_divInt.getText());
     }//GEN-LAST:event_jButton_divIntActionPerformed
 
     private void jButton_totalizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_totalizaActionPerformed
@@ -521,8 +522,8 @@ public class View_Calculadora extends javax.swing.JFrame {
         //limpa o painel
         Painel.setText("");
         
-        //define o operador como soma(+)
-        ControlCalculadora.setOperador("*");
+        //define o operador como multiplicação(*)
+        ControlCalculadora.setOperador(jButton_multi.getText());
     }//GEN-LAST:event_jButton_multiActionPerformed
 
     private void jButton_subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_subActionPerformed
@@ -532,8 +533,8 @@ public class View_Calculadora extends javax.swing.JFrame {
         //limpa o painel
         Painel.setText("");
         
-        //define o operador como soma(+)
-        ControlCalculadora.setOperador("-");
+        //define o operador como subtração(-)
+        ControlCalculadora.setOperador(jButton_sub.getText());
     }//GEN-LAST:event_jButton_subActionPerformed
 
     private void jButton_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_somaActionPerformed
@@ -544,11 +545,11 @@ public class View_Calculadora extends javax.swing.JFrame {
         Painel.setText("");
         
         //define o operador como soma(+)
-        ControlCalculadora.setOperador("+");
+        ControlCalculadora.setOperador(jButton_soma.getText());
     }//GEN-LAST:event_jButton_somaActionPerformed
 
     private void jButton_pontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_pontoActionPerformed
-        InserirDigito(".");
+        InserirDigito(jButton_ponto.getText());
     }//GEN-LAST:event_jButton_pontoActionPerformed
 
     private void jButton_piActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_piActionPerformed
