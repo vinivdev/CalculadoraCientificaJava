@@ -42,6 +42,25 @@ public class Ctr_Calculadora {
         return Double.toString(calculadora.getResultado());
     }
     
+    public double getMemoria() {
+        return calculadora.getMemoria();
+    }
+    
+    public String getAuxText() {
+        return calculadora.getAuxText();
+    }
+
+    public void setAuxText(String AuxText) {
+        calculadora.setAuxText(AuxText);
+    }
+
+    public double getAuxValor() {
+        return calculadora.getAuxValor();
+    }
+
+    public void setAuxValor(double auxValor) {
+        calculadora.setAuxValor(auxValor);
+    }
     
     
     public void SelecionaOperadoracao(){
@@ -125,6 +144,24 @@ public class Ctr_Calculadora {
         calculadora.setNumero1(Math.toRadians(Double.parseDouble(painel)));
         
         calculadora.setResultado(Math.cos(calculadora.getNumero1()));
+    }
+    
+    //  metodos da memória
+    
+    public void btnMC(){
+        calculadora.setMemoria(0);
+    }
+    
+    public double getMR(){
+        return calculadora.getMemoria();
+    }
+    
+    public void btnMmenos(double auxValor){
+        calculadora.setMemoria(auxValor -= calculadora.getMemoria() );
+    }
+    
+    public void btnMmais(double auxValor){
+        calculadora.setMemoria(auxValor += calculadora.getMemoria() );
     }
     
 }

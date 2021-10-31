@@ -15,12 +15,19 @@ public class Calculadora {
     private double numero2;
     private String operador;
     private double resultado;
+    private double memoria;
+    private String auxText;
+    private double auxValor;
     
     public void Calculadora(){
         numero1 = 0;
         numero2 = 0;
         resultado = 0;
         operador = "";
+        memoria = 0;
+        //variaveis auxiliares
+        auxText = "";
+        auxValor = 0;
     }
 
     public double getNumero1() {
@@ -54,5 +61,30 @@ public class Calculadora {
     public void setResultado(double resultado) {
         this.resultado = resultado;
     }
-    //fim GetSet
+
+    public double getMemoria() {
+        return memoria;
+    }
+
+    public void setMemoria(double memoria) {
+        this.memoria = memoria;
+    }
+
+    public String getAuxText() {
+        return auxText;
+    }
+
+    public void setAuxText(String auxText) {
+        this.auxText = auxText;
+    }
+
+    public double getAuxValor() {
+        return auxValor;
+    }
+
+    public void setAuxValor(double auxValor) {
+        this.auxValor = auxValor;
+    }
+    
+    
 }

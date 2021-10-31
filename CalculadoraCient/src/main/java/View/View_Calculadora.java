@@ -419,19 +419,37 @@ public class View_Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_n6ActionPerformed
 
     private void jButton_nMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_nMaisActionPerformed
-        // TODO add your handling code here:
+        //armazena oq esta no painel na var 'AuxText'
+        ControlCalculadora.setAuxText(Painel.getText());
+        
+        VerificaTexto();
+        
+        //soma o valor no painel para a memória
+        ControlCalculadora.btnMmais(ControlCalculadora.getAuxValor());
     }//GEN-LAST:event_jButton_nMaisActionPerformed
 
     private void jButton_mMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_mMenosActionPerformed
-        // TODO add your handling code here:
+        
+        //armazena oq esta no painel na var 'AuxText'
+        ControlCalculadora.setAuxText(Painel.getText());
+        
+        VerificaTexto();
+        
+        //subtrai ao valor da memória
+        ControlCalculadora.btnMmenos(ControlCalculadora.getMemoria());
+       
     }//GEN-LAST:event_jButton_mMenosActionPerformed
 
     private void jButton_mrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_mrActionPerformed
-        // TODO add your handling code here:
+        
+        Painel.setText("");
+        
+        Painel.setText(Double.toString(ControlCalculadora.getMemoria()));
+        
     }//GEN-LAST:event_jButton_mrActionPerformed
 
     private void jButton_mcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_mcActionPerformed
-        // TODO add your handling code here:
+        ControlCalculadora.btnMC();
     }//GEN-LAST:event_jButton_mcActionPerformed
 
     private void jButton_CAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CAActionPerformed
@@ -597,7 +615,13 @@ public class View_Calculadora extends javax.swing.JFrame {
         Painel.setText(ControlCalculadora.getResultado());
     }//GEN-LAST:event_jButton_cosActionPerformed
 
-
+    private void VerificaTexto(){
+        if (!"".equals(ControlCalculadora.getAuxText())){ //se houver algo no painel, executa o IF
+            //pega a PainelText e converte para double, para armazenar na PainelValor
+            ControlCalculadora.setAuxValor(Double.parseDouble(ControlCalculadora.getAuxText()));
+        }
+    }
+    
     private void InserirDigito(String digito){        
         if(Painel.equals("")){
         Painel.setText(Painel.getText());
